@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&display=swap");
+:root {
+  font-size: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-image: linear-gradient(252.44deg, #716276 0%, #c3b4c8 100%);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (22.2rem)[8];
+      grid-template-columns: repeat(8, 22.2rem);
+  -ms-grid-rows: (11.8rem)[8];
+      grid-template-rows: repeat(8, 11.8rem);
+  gap: 2rem;
+  font-family: "Lato", sans-serif;
+}
+
+body nav {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  position: relative;
+  top: 2rem;
+}
+
+body #root {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 6;
+  grid-column: 2 / 8;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 5;
+  grid-row: 2 / 7;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (16.2rem)[8];
+      grid-template-columns: repeat(8, 16.2rem);
+  -ms-grid-rows: (8.3rem)[8];
+      grid-template-rows: repeat(8, 8.3rem);
+  gap: 2rem;
+}
+
+body #root .root-sm-card, body #root div[cardType] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  gap: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0.3rem solid rgba(132, 68, 148, 0.21);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 1rem;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+body #root .root-sm-card:hover, body #root div[cardType]:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  border: 0.3rem solid #844494;
+}
+
+body #root .root-sm-card .root-sm-card-img, body #root div[cardType] .root-sm-card-img {
+  max-width: 18.5rem;
+  max-height: 18rem;
+  margin-right: 3.6rem;
+  border-radius: 1rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+body #root .root-sm-card .root-sm-card-img:hover, body #root div[cardType] .root-sm-card-img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+body #root .root-sm-card .sm-card-data, body #root div[cardType] .sm-card-data {
+  margin: auto 0;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-left: -6rem;
+}
+
+body #root .root-sm-card .sm-card-data img, body #root div[cardType] .sm-card-data img {
+  vertical-align: text-bottom;
+  margin: 0 auto;
+  vertical-align: middle;
+  -webkit-transition: all 1.5s ease;
+  transition: all 1.5s ease;
+}
+
+body #root .root-sm-card .sm-card-data img:hover, body #root div[cardType] .sm-card-data img:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+body #root .root-sm-card .sm-card-data div, body #root div[cardType] .sm-card-data div {
+  position: relative;
+  color: white;
+  font-size: 2rem;
+  margin-left: 3.6rem;
+  display: inline-block;
+}
+
+body #root #root-lg-card {
+  border: 0.3rem solid rgba(132, 68, 148, 0.21);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 1rem;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+body #root #root-lg-card:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  border: 0.3rem solid #844494;
+}
+
+body #root #root-lg-card .lg-card-img {
+  height: 29rem;
+  border-radius: 1rem;
+  width: 33.8rem;
+  margin-bottom: 3.6rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+body #root #root-lg-card .lg-card-img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+body #root #root-lg-card .lg-card-data {
+  margin: auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  max-width: 34rem;
+  height: 29rem;
+  margin-top: -5rem;
+  color: white;
+  font-size: 2.3rem;
+  margin-left: -8rem;
+}
+
+body #root #root-lg-card .lg-card-data img {
+  margin-left: 3.6rem;
+  vertical-align: middle;
+  -webkit-transition: all 1.5s ease;
+  transition: all 1.5s ease;
+}
+
+body #root #root-lg-card .lg-card-data img:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+body #root #root-lg-card .lg-card-data div {
+  margin-left: 3.6rem;
+  display: inline-block;
+}
+
+body #root .one {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / 4;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  grid-row: 2 / 4;
+}
+
+body #root .two {
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 3;
+  grid-column: 6 / 9;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  grid-row: 2 / 4;
+}
+
+body #root .three {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / 4;
+  -ms-grid-row: 6;
+  -ms-grid-row-span: 2;
+  grid-row: 6 / 8;
+}
+
+body #root .four {
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 3;
+  grid-column: 6 / 9;
+  -ms-grid-row: 6;
+  -ms-grid-row-span: 2;
+  grid-row: 6 / 8;
+}
+
+body #root .five {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 2;
+  grid-column: 4 / 6;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 6;
+  grid-row: 2 / 8;
+}
+/*# sourceMappingURL=style.css.map */

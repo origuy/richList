@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&display=swap");
+
+//Color Pallete
+$creditColor: rgba(255, 255, 255, 0.3);
+$desktopBGColor: linear-gradient(252.44deg, #716276 0%, #c3b4c8 100%);
+$textColor: rgba(255, 255, 255, 1);
+$purple: rgba(132, 68, 148, 1);
+
+//Sm card properties
+$imgSmWidth: 15.9rem;
+$imgSmHeight: 18rem;
+$imgSmMarginLeft: 3.6rem;
+$iconsSmMarginLeft: 1.9rem;
+
+//Lg card properties
+$imgLgWidth: 33.8rem;
+$imgLgHeight: 28.8rem;
+$imgLgMarginBottom: 3.6rem;
+$iconsSmMarginLeft: 3.6rem;
+
+//body Grid
+$bodyGridCol: 22.2rem;
+$bodyGridRow: 11.8rem;
+$bodyGridGap: 2rem;
+
+//root Grid
+$rootGridCol: 16.2rem;
+$rootGridRow: 8.3rem;
+$rootGridGap: 2rem;
+
+:root {
+	font-size: 10px;
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background-image: $desktopBGColor;
+	display: grid;
+	grid-template-columns: repeat(8, $bodyGridCol);
+	grid-template-rows: repeat(8, $bodyGridRow);
+	gap: $bodyGridGap;
+	font-family: "Lato", sans-serif;
+	nav {
+		grid-column: 2;
+		align-self: end;
+		position: relative;
+		top: 2rem;
+	}
+
+	#root {
+		grid-column: 2 / 8;
+		grid-row: 2 / 7;
+		display: grid;
+		grid-template-columns: repeat(8, $rootGridCol);
+		grid-template-rows: repeat(8, $rootGridRow);
+		gap: $bodyGridGap;
+		.root-sm-card, div[cardType] {
+			display: flex;
+			flex-flow: row nowrap;
+			gap: $bodyGridGap;
+			align-items: center;
+			border: 0.3rem solid rgba(132, 68, 148, 0.21);
+			box-sizing: border-box;
+			border-radius: 1rem;
+			cursor: pointer;
+			transition: all 0.5s ease ;
+
+			&:hover{
+				transform: scale(1.05);
+				border: 0.3rem solid rgba(132, 68, 148, 1);
+
+			}
+			.root-sm-card-img {
+				max-width: 18.5rem;
+				max-height: 18rem;
+				margin-right: $imgSmMarginLeft;
+				border-radius: 1rem;
+				transition: all 0.5s ease ;
+				&:hover{
+					transform: scale(1.05);
+				}
+			}
+			.sm-card-data {
+				margin: auto 0;
+				height: 100%;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: space-evenly;
+				margin-left: -6rem;
+				img {
+					vertical-align: text-bottom;
+					margin: 0 auto;
+					vertical-align: middle;
+					transition: all 1.5s ease ;
+					&:hover{
+						transform: rotate(360deg);
+					}
+				}
+				div {
+					position: relative;
+					color: $textColor;
+					font-size: 2rem;
+					margin-left: $iconsSmMarginLeft;
+					display: inline-block;
+				}
+			}
+		}
+
+		#root-lg-card {
+			border: 0.3rem solid rgba(132, 68, 148, 0.21);
+			box-sizing: border-box;
+			border-radius: 1rem;
+			cursor: pointer;
+			display: flex;
+			flex-flow: column nowrap;
+			transition: all 0.5s ease ;
+			&:hover{
+				transform: scale(1.05);
+				border: 0.3rem solid rgba(132, 68, 148, 1);
+
+			}
+			.lg-card-img {
+				height: 29rem;
+				border-radius: 1rem;
+				width: 33.8rem;
+				margin-bottom: $imgLgMarginBottom;
+				transition: all 0.5s ease ;
+				&:hover{
+					transform: scale(1.05);
+				}
+			}
+
+			.lg-card-data {
+				margin: auto 0;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: space-evenly;
+				max-width: 34rem;
+				height: 29rem;
+				margin-top: -5rem;
+				color: $textColor;
+				font-size: 2.3rem;
+				margin-left: -8rem;
+				img {
+					margin-left: $iconsSmMarginLeft;
+					vertical-align: middle;
+					transition: all 1.5s ease ;
+					&:hover{
+						transform: rotate(360deg);
+					}
+				}
+				div {
+					margin-left: $iconsSmMarginLeft;
+					display: inline-block;
+				}
+			}
+		}
+		.one {
+			grid-column: 1 / 4;
+			grid-row: 2 / 4;
+		}
+		.two {
+			grid-column: 6 / 9;
+			grid-row: 2 / 4;
+		}
+		.three {
+			grid-column: 1 / 4;
+			grid-row: 6 / 8;
+		}
+		.four {
+			grid-column: 6 / 9;
+			grid-row: 6 / 8;
+		}
+		.five {
+			grid-column: 4 / 6;
+			grid-row: 2 / 8;
+		}
+	}
+}
